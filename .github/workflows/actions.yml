@@ -1,6 +1,11 @@
 name: Github Actions Example
 
 on:
+  pull-request:
+    types: [opened]
+    branches:
+      - master
+      - develop
   push:
     branches:
       - feature/*
