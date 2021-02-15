@@ -4,11 +4,11 @@ on:
   pull_request:
     types: [opened]
     branches:
-      - master
-      - develop
+    - master
+    - develop
   push:
     branches:
-      - feature/*
+    - feature/*
 
 jobs:
   build:
