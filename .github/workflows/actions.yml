@@ -1,6 +1,9 @@
 name: Github Actions Example
 
 on:
+  push:
+    branches:
+      - feature/subtract
   pull_request:
     branches:
       - master
