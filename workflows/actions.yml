@@ -3,7 +3,7 @@ name: Github Actions Example
 on:
   push:
     branches:
-      - feature/subtract
+      - feature/*
 
 jobs:
   build:
@@ -11,8 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v1
+    - name: Checkout code                 
+      uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
-    - run: npm install
-    - run: npm test
+    - name: Install dependencies
+      run: npm install
+    - name: Run unit tests
+      run: npm test
