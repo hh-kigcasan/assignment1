@@ -3,11 +3,11 @@ name: Github Actions Example
 on:
   pull_request:
     branches:
-    - master
-    - develop
+      - master
+      - develop
   push:
     branches:
-    - feature/*
+      - feature/*
 
 jobs:
   build:
